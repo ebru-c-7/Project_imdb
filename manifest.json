@@ -1,0 +1,23 @@
+{
+    "name": "IMDB Searcher",
+    "description": "Search movies on imdb faster.",
+    "version": "0.1",
+    "developer": "Ebru C-7",
+    "manifest_version": 2,
+    "icons": {
+        "128": "imdb.png",
+        "16": "imdb-sm.png"
+    },
+    "content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["src/main.css"]
+		}
+    ],
+    "permissions": [
+		"contextMenus"
+    ],
+    "background": { 
+        "scripts": ["src/imdb.js"]
+      }
+}
